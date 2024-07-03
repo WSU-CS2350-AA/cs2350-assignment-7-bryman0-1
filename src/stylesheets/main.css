@@ -11,13 +11,23 @@ h1 {
     display: inline;
     padding-right: 10rem;
 }
-canvas {
+#draw {
     width: 1000px;
     height: 550px;
     border: dashed 5px gold;
     image-rendering: pixelated;
     margin-bottom: 0.5rem;
 }
+/*
+#scenel, #scener {
+    width: 100px;
+    height: 550px;
+    display: inline;
+    border: dashed 5px gold;
+    margin-bottom: 0.5rem;
+    background-color: aquamarine;
+}
+*/
 .block {
     width: 25px;
     height: 25px;

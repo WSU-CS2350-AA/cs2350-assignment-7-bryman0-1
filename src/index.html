@@ -12,7 +12,8 @@
 
   <body>
     <h1>Spray Painting</h1>
-    <span>Move the cursor using the arrow keys and press enter to spray paint in that place</span>
+    <span>Move the cursor using the <b>arrow keys</b> and press <b>enter</b> to spray paint in that place</span>
+    <br>
     <canvas id="draw">
       Sorry, your browser doesn't support this page.
     </canvas>
@@ -21,7 +22,7 @@
       <input type="color" id="background" value="#808080">
 
       <label for="paint">Select cursor color:</label>
-      <input type="color" id="paint">
+      <input type="color" id="paint" value="#ffffff">
 
       <label for="eraser">Eraser:</label>
       <input type="checkbox" id="eraser">
@@ -40,7 +41,7 @@
       <input type="checkbox" id="hide">
 
       <hr>
-      <button type="button" id="reset">Reset</button>
+      <button type="button" id="reset">Clear</button>
     </form>
     <script type="module" src="./javascripts/main.js"></script>
   </body>

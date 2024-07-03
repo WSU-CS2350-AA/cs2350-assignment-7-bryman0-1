@@ -11,6 +11,30 @@ const canvas = document.getElementById("draw");
 const ctx = canvas.getContext("2d");
 
 function setup() {
+    /*const can = document.getElementById("scenel");
+    const ct = can.getContext("2d");
+    ct.fillStyle = "#804000";
+    ct.fillRect(100,50,100,100)
+    ct.fillStyle = "#008000";
+    ct.beginPath()
+    ct.arc(100, 40, 50, 0, Math.PI * 2, true)
+    ct.fill()
+    ct.beginPath()
+    ct.arc(200, 20, 50, 0, Math.PI * 2, true)
+    ct.fill()
+    ct.beginPath()
+    ct.arc(150, 10, 50, 0, Math.PI * 2, true)
+    ct.fill()
+    const cn = document.getElementById("scener");
+    const cx = cn.getContext("2d");
+    cx.fillStyle = "#ffff00"
+    cx.beginPath()
+    cx.arc(250, 0, 75, 0, Math.PI * 2, true)
+    cx.fill()
+    cx.fillStyle = "#008000";
+    cx.beginPath()
+    cx.arc(50, 200, 100, 0, Math.PI * 2, true)
+    cx.fill()*/
     for (let i = 0; i < maxX; i++) {
         for (let j = 0; j < maxY; j++) {
             colorData[j + (i * maxY)] = "b"
@@ -18,6 +42,7 @@ function setup() {
             brickTile(i, j)
         }
     }
+    onHideChange()
 }
 
 function brickTile(a, b) {
@@ -111,7 +136,7 @@ function fillRow() {
     for (let i = 0; i < maxX; i++) {
         colorData[y + (i * maxY)] = document.querySelector('[id="paint"]').value
         shapeData[y + (i * maxY)] = document.querySelector('[id="shape"]').value
-        fill(document.querySelector('[id="shape"]').value, document.querySelector('[id="paint"]'), i, y)
+        fill(document.querySelector('[id="shape"]').value, colorData[y + (i * maxY)], i, y)
     }
 }
 
@@ -119,7 +144,7 @@ function fillCol() {
     for (let i = 0; i < maxY; i++) {
         colorData[i + (x * maxY)] = document.querySelector('[id="paint"]').value
         shapeData[i + (x * maxY)] = document.querySelector('[id="shape"]').value
-        fill(document.querySelector('[id="shape"]').value, document.querySelector('[id="paint"]'), x, i)
+        fill(document.querySelector('[id="shape"]').value, colorData[i + (x * maxY)], x, i)
     }
 }
 
