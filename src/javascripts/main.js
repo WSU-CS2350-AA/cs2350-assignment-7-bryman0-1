@@ -1,4 +1,3 @@
-//TODO - Your ES6 JavaScript code (if any) goes here
 import "bootstrap"
 let x = 0
 let y = 0
@@ -11,30 +10,6 @@ const canvas = document.getElementById("draw");
 const ctx = canvas.getContext("2d");
 
 function setup() {
-    /*const can = document.getElementById("scenel");
-    const ct = can.getContext("2d");
-    ct.fillStyle = "#804000";
-    ct.fillRect(100,50,100,100)
-    ct.fillStyle = "#008000";
-    ct.beginPath()
-    ct.arc(100, 40, 50, 0, Math.PI * 2, true)
-    ct.fill()
-    ct.beginPath()
-    ct.arc(200, 20, 50, 0, Math.PI * 2, true)
-    ct.fill()
-    ct.beginPath()
-    ct.arc(150, 10, 50, 0, Math.PI * 2, true)
-    ct.fill()
-    const cn = document.getElementById("scener");
-    const cx = cn.getContext("2d");
-    cx.fillStyle = "#ffff00"
-    cx.beginPath()
-    cx.arc(250, 0, 75, 0, Math.PI * 2, true)
-    cx.fill()
-    cx.fillStyle = "#008000";
-    cx.beginPath()
-    cx.arc(50, 200, 100, 0, Math.PI * 2, true)
-    cx.fill()*/
     for (let i = 0; i < maxX; i++) {
         for (let j = 0; j < maxY; j++) {
             colorData[j + (i * maxY)] = "b"
@@ -47,13 +22,13 @@ function setup() {
 
 function brickTile(a, b) {
     ctx.fillStyle = document.querySelector('[id="background"]').value
-    ctx.fillRect((a*shapeSize), (b*shapeSize), shapeSize, shapeSize);
-    ctx.fillStyle = "#000000";
-    ctx.fillRect((a*shapeSize), (b*shapeSize)+2, shapeSize, 1);
-    ctx.fillRect((a*shapeSize), (b*shapeSize)+7, shapeSize, 1);
-    ctx.fillRect((a*shapeSize)+2, (b*shapeSize), 1, 2);
-    ctx.fillRect((a*shapeSize)+2, (b*shapeSize)+8, 1, 2);
-    ctx.fillRect((a*shapeSize)+7, (b*shapeSize)+3, 1, 4);
+    ctx.fillRect((a*shapeSize), (b*shapeSize), shapeSize, shapeSize)
+    ctx.fillStyle = "#000000"
+    ctx.fillRect((a*shapeSize), (b*shapeSize)+2, shapeSize, 1)
+    ctx.fillRect((a*shapeSize), (b*shapeSize)+7, shapeSize, 1)
+    ctx.fillRect((a*shapeSize)+2, (b*shapeSize), 1, 2)
+    ctx.fillRect((a*shapeSize)+2, (b*shapeSize)+8, 1, 2)
+    ctx.fillRect((a*shapeSize)+7, (b*shapeSize)+3, 1, 4)
 }
 
 function fill(shapeId, color, a, b) {
@@ -82,7 +57,7 @@ function keyPressed(key) {
         if (colorData[y + (x * maxY)] == "b") {
             ctx.fillStyle = document.querySelector('[id="background"]').value
         }
-        ctx.fillRect((x*shapeSize)+shapeSize * 0.3, (y*shapeSize)+shapeSize * 0.3, shapeSize * 0.4, shapeSize * 0.4);
+        ctx.fillRect((x*shapeSize)+shapeSize * 0.3, (y*shapeSize)+shapeSize * 0.3, shapeSize * 0.4, shapeSize * 0.4)
         switch(key.keyCode) {
             case 37:
                 if (x > 0) {
@@ -108,13 +83,13 @@ function keyPressed(key) {
         if (document.querySelector('[id="hide"]').checked == false) {
             if (document.querySelector('[id="paint"]').value == colorData[y + (x * maxY)]) {
                 ctx.fillStyle = document.querySelector('[id="background"]').value
-                ctx.fillRect((x*shapeSize)+shapeSize * 0.3, (y*shapeSize)+shapeSize * 0.3, shapeSize * 0.4, shapeSize * 0.4);
+                ctx.fillRect((x*shapeSize)+shapeSize * 0.3, (y*shapeSize)+shapeSize * 0.3, shapeSize * 0.4, shapeSize * 0.4)
                 ctx.fillStyle = document.querySelector('[id="paint"]').value
-                ctx.fillRect((x*shapeSize)+shapeSize * 0.4, (y*shapeSize)+shapeSize * 0.4, shapeSize * 0.2, shapeSize * 0.2);
+                ctx.fillRect((x*shapeSize)+shapeSize * 0.4, (y*shapeSize)+shapeSize * 0.4, shapeSize * 0.2, shapeSize * 0.2)
             }
             else {
                 ctx.fillStyle = document.querySelector('[id="paint"]').value
-                ctx.fillRect((x*shapeSize)+shapeSize * 0.3, (y*shapeSize)+shapeSize * 0.3, shapeSize * 0.4, shapeSize * 0.4);
+                ctx.fillRect((x*shapeSize)+shapeSize * 0.3, (y*shapeSize)+shapeSize * 0.3, shapeSize * 0.4, shapeSize * 0.4)
             }
         }
     }
@@ -160,13 +135,13 @@ function onHideChange() {
     if (document.querySelector('[id="hide"]').checked == false) {
         if (document.querySelector('[id="paint"]').value == colorData[y + (x * maxY)]) {
             ctx.fillStyle = document.querySelector('[id="background"]').value
-            ctx.fillRect((x*shapeSize)+shapeSize * 0.3, (y*shapeSize)+shapeSize * 0.3, shapeSize * 0.4, shapeSize * 0.4);
+            ctx.fillRect((x*shapeSize)+shapeSize * 0.3, (y*shapeSize)+shapeSize * 0.3, shapeSize * 0.4, shapeSize * 0.4)
             ctx.fillStyle = document.querySelector('[id="paint"]').value
-            ctx.fillRect((x*shapeSize)+shapeSize * 0.4, (y*shapeSize)+shapeSize * 0.4, shapeSize * 0.2, shapeSize * 0.2);
+            ctx.fillRect((x*shapeSize)+shapeSize * 0.4, (y*shapeSize)+shapeSize * 0.4, shapeSize * 0.2, shapeSize * 0.2)
         }
         else {
             ctx.fillStyle = document.querySelector('[id="paint"]').value
-            ctx.fillRect((x*shapeSize)+shapeSize * 0.3, (y*shapeSize)+shapeSize * 0.3, shapeSize * 0.4, shapeSize * 0.4);
+            ctx.fillRect((x*shapeSize)+shapeSize * 0.3, (y*shapeSize)+shapeSize * 0.3, shapeSize * 0.4, shapeSize * 0.4)
         }
     }
     else {
@@ -174,14 +149,14 @@ function onHideChange() {
         if (colorData[y + (x * maxY)] == "b") {
             ctx.fillStyle = document.querySelector('[id="background"]').value
         }
-        ctx.fillRect((x*shapeSize)+shapeSize * 0.3, (y*shapeSize)+shapeSize * 0.3, shapeSize * 0.4, shapeSize * 0.4);
+        ctx.fillRect((x*shapeSize)+shapeSize * 0.3, (y*shapeSize)+shapeSize * 0.3, shapeSize * 0.4, shapeSize * 0.4)
     }
 }
 
 document.querySelector('[id="background"]').onchange = backgroundChange
 document.querySelector('[id="hide"]').onchange = onHideChange
 document.body.onload = setup
-document.onkeydown = keyPressed;
+document.onkeydown = keyPressed
 document.querySelector('[id="reset"]').onclick = setup
 document.querySelector('[id="row"]').onclick = fillRow
 document.querySelector('[id="col"]').onclick = fillCol

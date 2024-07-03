@@ -18,24 +18,3 @@ h1 {
     image-rendering: pixelated;
     margin-bottom: 0.5rem;
 }
-/*
-#scenel, #scener {
-    width: 100px;
-    height: 550px;
-    display: inline;
-    border: dashed 5px gold;
-    margin-bottom: 0.5rem;
-    background-color: aquamarine;
-}
-*/
-.block {
-    width: 25px;
-    height: 25px;
-    background-color: blue;
-}
-.cursor {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    background-color: black;
-}
