@@ -1,3 +1,31 @@
 /* Your styles go here */
 @import url("bootstrap/dist/css/bootstrap.min.css");
 @import url("bootstrap-icons/font/bootstrap-icons.css");
+html {
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+h1 {
+    display: inline;
+    padding-right: 10rem;
+}
+canvas {
+    width: 1000px;
+    height: 550px;
+    border: dashed 5px gold;
+    image-rendering: pixelated;
+    margin-bottom: 0.5rem;
+}
+.block {
+    width: 25px;
+    height: 25px;
+    background-color: blue;
+}
+.cursor {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: black;
+}

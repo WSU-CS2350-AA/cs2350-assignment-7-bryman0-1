@@ -2,26 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Project Starter</title>
+    <title>Spray Painting</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="TODO: A starter project for ..." />
+    <meta name="description" content="you move the cursor and press enter to spraye" />
 
     <link rel="stylesheet" href="./stylesheets/main.css" />
   </head>
 
   <body>
-    <!-- Your HTML goes here -->
-    <h1 class="display-2 text-center my-5 py-5">
-      <span class="d-block py-5">
-        <i class="bi bi-filetype-html text-primary"></i>
-        <i class="bi bi-filetype-css text-danger"></i>
-        <i class="bi bi-filetype-js text-success"></i>
-      </span>
+    <h1>Spray Painting</h1>
+    <span>Move the cursor using the arrow keys and press enter to spray paint in that place</span>
+    <canvas id="draw">
+      Sorry, your browser doesn't support this page.
+    </canvas>
+    <form>
+      <label for="background">Select background color:</label>
+      <input type="color" id="background" value="#808080">
 
-      Welcome to CS 2350!
-    </h1>
+      <label for="paint">Select cursor color:</label>
+      <input type="color" id="paint">
 
+      <label for="eraser">Eraser:</label>
+      <input type="checkbox" id="eraser">
+
+      <label for="shape">Shape: </label>
+      <select id="shape">
+        <option value="1" selected>&#9899;</option>
+        <option value="2"> &#9670;</option>
+      </select>
+
+      <button type="button" id="row">Fill Current Row</button>
+
+      <button type="button" id="col">Fill Current Column</button>
+
+      <label for="hide">Hide Cursor:</label>
+      <input type="checkbox" id="hide">
+
+      <hr>
+      <button type="button" id="reset">Reset</button>
+    </form>
     <script type="module" src="./javascripts/main.js"></script>
   </body>
 </html>
